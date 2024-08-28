@@ -57,3 +57,6 @@ python Pando.py <file_to_scan> [options]
 Examples:
 - To perform a quick scan with minimal output: ```python Pando.py sample.exe --quick```.
 - To perform a full scan with detailed findings: ```python Pando.py sample.exe --full -v```.
+
+# ScreenShot
+![Alt text](https://i.ibb.co/445wVt8/Pando-Results.png)
