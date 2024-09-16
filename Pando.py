@@ -190,8 +190,8 @@ def showfileinfo(info):
     table = Table(box=ROUNDED, border_style="bright_magenta", expand=True)
     
     # Add columns with headers 'Attribute' and 'Value'
-    table.add_column("Attribute", style="cyan", no_wrap=True)
-    table.add_column("Value", style="magenta")
+    table.add_column("Attribute", style="sky_blue2", no_wrap=True)
+    table.add_column("Value", style="gold3")
     
     # Add individual fields
     table.add_row("Filename", str(info.get("filename", "")))
@@ -408,7 +408,7 @@ def showresana(resources):
             "Type":"cyan",
             "Name":"yellow",
             "Language":"magenta",
-            "Size":"blue",
+            "Size":"dodger_blue3",
             "Entropy":"green",
             "Suspicion":"red"
         }[col], no_wrap=True if col=="Type" else False)
@@ -866,7 +866,7 @@ def main():
                     table.add_row(name, findings)
                 console.print(Panel(table, title="[bold cyan]Matched Rules[/bold cyan]", border_style="bright_magenta", expand=False))
             else:
-                names = "\n".join([f"[green]>>[/green] {fmtrulename(r['meta']['name'])}" for r in sorted(matched_rules, key=lambda r: r['meta']['name'])])
+                names = "\n".join([f"[bold_green]>>[/bold_green] {fmtrulename(r['meta']['name'])}" for r in sorted(matched_rules, key=lambda r: r['meta']['name'])])
                 console.print(Panel(Padding(names, (1,2)), title="[bold cyan]Matched Rules[/bold cyan]", title_align="center", border_style="bright_magenta"))
         else:
             console.print(Panel("[bold red]No rules matched.[/bold red]", title="Scan Result", border_style="red"))
