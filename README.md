@@ -60,5 +60,15 @@ Examples:
 - To perform a quick scan with minimal output: ```python Pando.py sample.exe --quick```.
 - To perform a full scan with detailed findings: ```python Pando.py sample.exe --full -v```.
 
+## Update Log
+- 9/16/2024:
+  - Reworked characteristic matching logic
+  - Removed ~25 useless rules
+  - Implemented rule heirarchy (for prerequisite rules)
+  - Added multithreading to -q and -f
+  - Added ANGR scanner error report
+  - Added rules auto-clean feature (auto removes bad rules, but backs up original to rules.bak)
 # ScreenShot
 ![Alt text](https://i.ibb.co/445wVt8/Pando-Results.png)
+
+
